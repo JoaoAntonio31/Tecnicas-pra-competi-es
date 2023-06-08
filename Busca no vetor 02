@@ -1,0 +1,43 @@
+Problema "Busca no vetor 02" - Neps Academy
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main(){
+
+    vector<int> b;
+    int lista[10];
+    for(int i =0;i<10;i++){
+        cin >> lista[i];
+    }
+    int n;
+    cin >> n;
+    int cont = 0;
+    string s;
+
+    for(int i =0;i<10;i++){
+        if(lista[i] == n){
+          cont++;
+          b.push_back(i);
+}
+        else{
+            s = "Mia x";
+        }
+    }
+
+    if(cont > 0){
+        cout << cont << endl;
+        for(auto x : b){
+            cout << x << " ";
+        }
+    }
+    else{
+        cout << s;
+    }
+
+
+
+
+    return 0;
+}
