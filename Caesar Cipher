@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main(){
+
+ string s = "zebra";
+ for(char&c : s){
+        for(int rep = 0;rep <13;rep++){
+    if(c == 'z'){
+        c = 'a';
+    }
+    else{
+     c++;
+ }
+}
+}
+ cout << s << endl;
+
+ return 0;
+}
