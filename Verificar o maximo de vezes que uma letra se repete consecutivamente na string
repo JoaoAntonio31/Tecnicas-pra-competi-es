@@ -1,0 +1,22 @@
+int maxRepetitions(const string& str) {
+    int maxCount = 0;
+    int count = 1;
+
+    for (int i = 1; i < str.length(); i++) {
+        if (str[i] == str[i - 1]) {
+            count++;
+        } else {
+            if (count > maxCount) {
+                maxCount = count;
+            }
+            count = 1;
+        }
+    }
+
+
+    if (count > maxCount) {
+        maxCount = count;
+    }
+
+    return maxCount;
+}
