@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+// retorna verdadeiro se N é primo
+bool teste(int N)
+{
+	// lembre-se que 1 não é primo
+	if (i == 1) return false;
+
+	// i*i <= N é equivalente a i <= sqrt(N), e assim evitamos usar a função sqrt()
+	for (int i = 2; i*i <= N; i++)
+		if (N%i == 0) // se i é um divisor de N
+			return false;
+
+	return true;
+}
